@@ -1,2 +1,14 @@
-body {background-color: #ffffff;margin: 0; padding: 0}
-.default_header {background-color: #10062a;height:50px; top: 0; width:100%; position: fixed; box-shadow: 5px 5px 10px #333333; color: white}
+body {
+    background-color: #ffffff;
+    margin: 0; 
+    padding: 0
+}
+.default_header {
+    background-color: #10062a;
+    height:50px;
+    top: 0;
+    width:100%; 
+    position: fixed; 
+    box-shadow: 5px 5px 10px #333333; 
+    color: white;
+}
