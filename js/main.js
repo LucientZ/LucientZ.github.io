@@ -7,8 +7,8 @@ function elementFromHtml(html){
 }
 
 
-function addDefaultHeader(htmlObj){
-    // Adds default header to 
+function addDefaultHeader(){
+    // Adds default header to body.
     const defaultHeader = elementFromHtml(`
     <header class = "default_header">
         Testing
