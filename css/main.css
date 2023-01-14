@@ -10,21 +10,39 @@ html, body {
 /*============================================*/
 /* Nav Elements */
 /*============================================*/
+.top-elements{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.main-nav-btn{
+    height: 98px;
+}
+
 .nav-block{
-    margin: 0.5vh 1vw 0.5vh 1vw;
+    padding: 0 1vw 0 1vw;
 }
 
 .nav-btn{
-    border-color: white;
-    background-color: white;
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 10px;
+    border-style: none;
+    height: 100%;
+    background-color: transparent;
+    font-size: 25px;
 }
 
 .nav-btn:hover{
-    border-color: rgb(186, 163, 255);
     cursor: pointer;
+}
+
+.main-nav-btn:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.main-nav-btn:active{
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 800px){
@@ -47,27 +65,23 @@ html, body {
     background: linear-gradient(to left, #eea849, #ff5dd1);
     display: flex;
     flex-direction: row;
-    padding: 10px 2vw 10px 2vw;
+    padding: 0 2vw 0 2vw;
     align-items: center;
     margin: 0 0 0 0;
 }
 
-.nav-menu{
+ul.nav-menu{
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-ul.nav-menu{
     padding: 0;
-    margin-top: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     color: white;
     background-color: rgb(53, 53, 53);
 }
@@ -89,7 +103,7 @@ ul.nav-menu li:hover {
 /*============================================*/
 /* Slime Animation */
 /*============================================*/
-@keyframes bounce{
+@keyframes slime-bounce{
     from{
         transform: translateY(0%);
     }
@@ -137,6 +151,7 @@ div.slime-image{
     position: relative;
     height: 78px;
     width: 130px;
+    padding: 1.5vh 0 1.5vh 0;
 }
 
 div.slime-image:hover svg.slime-shadow{
@@ -159,7 +174,7 @@ div.slime-image:hover svg.slime .happy{
 }
 
 div.slime-image:hover svg.slime{
-    animation-name: bounce;
+    animation-name: slime-bounce;
     animation-duration: 0.7s;
     cursor: grab;
 }
