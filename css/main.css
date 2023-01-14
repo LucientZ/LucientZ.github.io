@@ -2,14 +2,27 @@ body {
     margin:0px
 }
 
+* {
+    font-family: "Raleway";
+}
+
+/*============================================*/
+/* Nav Elements */
+/*============================================*/
 .nav-block {
-    margin: 1vmin 1vw 1vmin 1vw;
+    margin: 0.5vh 1vw 0.5vh 1vw;
 }
 
 .nav-btn {
     background-color: rgb(159, 173, 174);
     border: none;
     font-size: 20px;
+    padding: 5px;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    border: none;
 }
 
 @media (max-width: 800px){
@@ -21,7 +34,13 @@ body {
 .main-nav {
     background-color: gray;
     display: flex;
+    flex-direction: row;
     padding: 10px 0 10px 2vw;
+    align-items:center;
+}
+
+.hamburger {
+    margin-left: auto;
 }
 
 /*============================================*/
@@ -48,18 +67,20 @@ body {
 @keyframes happy-particle{
     from{
         opacity: 0;
+        transform: translateY(8%);
     }
     50%{
-        opacity: 50;
+        opacity: 75;
     }
     to{
         opacity: 100;
+        transform: translateY(-1%);
     }
 }
 
 svg.slime:hover .happy{
     animation-name: happy-particle;
-    animation-duration: 0.7s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -72,6 +93,7 @@ svg.slime:hover{
 /* Makes animation repeat on click */
 svg.slime:active{
     animation-name: null;
+    border: none;
 }
 
 /* Default Behavior of what is visible during what time */
