@@ -94,7 +94,7 @@ ul.nav-menu li:hover {
         transform: translateY(0%);
     }
     20%{
-        transform: translateY(-10%) scaleX(0.85);
+        transform: translateY(-15%) scaleX(0.80);
     }
     60%{
         transform: translateY(8%) scaleX(1.15);
@@ -109,7 +109,7 @@ ul.nav-menu li:hover {
 
 @keyframes shadow-bounce{
     20%{
-        transform: scaleX(0.85) scaleY(0.95);
+        transform: scaleX(0.75) scaleY(0.95);
     }
     60%{
         transform: scaleX(1.15) scaleY(1.10);
@@ -136,6 +136,7 @@ ul.nav-menu li:hover {
 div.slime-image{
     position: relative;
     height: 78px;
+    width: 130px;
 }
 
 div.slime-image:hover svg.slime-shadow{
@@ -170,10 +171,6 @@ div.slime-image:active svg.slime-shadow{
     border: none;
 }
 
-div.slime-image{
-    width: 130px;
-}
-
 /* Default Behavior of what is visible during what time */
 svg.slime .happy,
 svg.slime #Closed-Eyes,
@@ -189,3 +186,7 @@ svg.slime:hover #Open-Mouth{
 }
 
 /* End of Logo Animation */
+
+/*============================================*/
+/* Sunset Parallax */
+/*============================================*/
