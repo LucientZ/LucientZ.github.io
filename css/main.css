@@ -88,8 +88,11 @@ html, body {
 }
 
 .hamburger-btn:hover{
+    cursor:pointer;
+}
+
+.hamburger-btn:active{
     border-radius: 5px;
-    cursor: pointer;
     margin-left: auto;
     background-color: rgba(0, 0, 0, 0.15);;
 }
