@@ -15,6 +15,11 @@ html, body {
     display: none;
 }
 
+/* Variables */
+:root{
+    --about_me_bg_color: rgb(66, 66, 66);
+}
+
 /*============================================*/
 /* Nav Elements */
 /*============================================*/
@@ -24,6 +29,8 @@ html, body {
     top: 0;
     left: 0;
     z-index: 1000;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
 
 .main-nav{
@@ -105,7 +112,6 @@ ul.nav-dropdown{
     padding: 0;
     margin: 0;
     width: 100%;
-    color: white;
     background-color: rgb(53, 53, 53);
     border-radius: 0 0 20px 20px;
     overflow: hidden;
@@ -122,6 +128,8 @@ ul.nav-dropdown li{
     width: 100%;
     text-align: center;
     cursor: pointer;
+    text-decoration: inherit;
+    color: white;
 }
 
 ul.nav-dropdown li:hover {
@@ -233,5 +241,18 @@ svg.slime:hover #Open-Mouth{
 }
 
 /*============================================*/
-/* Sunset Parallax */
+/* Section Formatting */
 /*============================================*/
+
+.landscape-section{
+    background-color:rgb(255, 185, 185);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px; /* z-axis camera difference */
+}
+
+.about-me-section{
+    background-color: var(--about_me_bg_color);
+    height: 80vh;
+}
