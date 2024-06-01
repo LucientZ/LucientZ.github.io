@@ -17,7 +17,11 @@ html, body {
 
 /* Variables */
 :root{
-    --about_me_bg_color: rgb(66, 66, 66);
+    --first-bg-color: rgb(19, 0, 18);
+    --second-bg-color: rgb(66, 66, 66);
+    --third-bg-color: rgb(255, 0, 0);
+    --fourth-bg-color: rgb(129, 120, 120);
+    --fifth-bg-color: rgb(194, 27, 27);
 }
 
 /*============================================*/
@@ -40,7 +44,7 @@ html, body {
     padding: 0 2vw 0 2vw;
     align-items: center;
     margin: 0 0 0 0;
-    height: 100px;
+    height: 7em;
     z-index: 2;
     position: relative;
 }
@@ -57,7 +61,7 @@ html, body {
     border-style: none;
     height: 100%;
     background-color: transparent;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 .nav-btn:hover{
@@ -222,11 +226,11 @@ div.slime-image:hover svg.slime{
 /* Hacky method that makes animation repeat on click */
 div.slime-image:active svg.slime,
 div.slime-image:active svg.slime-shadow{
-    animation-name: null;
+    animation-name: none;
     border: none;
 }
 
-/* Default Behavior of what is visible during what time */
+/* Default Opacity Values */
 svg.slime .happy,
 svg.slime #Closed-Eyes,
 svg.slime #Open-Mouth,
@@ -241,18 +245,61 @@ svg.slime:hover #Open-Mouth{
 }
 
 /*============================================*/
-/* Section Formatting */
+/* Temporary Section Formatting Area */
 /*============================================*/
 
+
+
+.skills-section{
+    background-color: var(--third-bg-color);
+    height: 40vh;
+}
+
+.projects-section{
+    background-color: var(--fourth-bg-color);
+    height: 40vh;
+}
+
+.footer{
+    background-color: var(--fifth-bg-color);
+    height: 40vh;
+}
+
+/*============================================*/
+/* Landscape Section */
+/*============================================*/
 .landscape-section{
-    background-color:rgb(255, 185, 185);
+    background-color: var(--first-bg-color);
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 300px; /* z-axis camera difference */
+    perspective: 300px;
 }
 
+/*============================================*/
+/* About Me Section */
+/*============================================*/
+
 .about-me-section{
-    background-color: var(--about_me_bg_color);
-    height: 80vh;
+    background-color: var(--second-bg-color);
+    padding: 3vh 2vw 3vh 2vw;
+    height: 30rem;
+    display:flex;
+    flex-direction: row;
+}
+
+.about-me-description-card{
+    padding: 1rem;
+    background-color: #141414;
+    display: flex;
+    flex-grow: 2;
+}
+
+.self-portrait{
+    border-radius: 100%;
+    aspect-ratio: 1;
+}
+
+.luci-sprite{
+    flex-grow: 1;
 }
