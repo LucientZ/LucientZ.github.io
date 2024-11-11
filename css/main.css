@@ -2,79 +2,41 @@
 /* Entire Document */
 /*============================================*/
 
+/* Variables */
+:root{
+    --primary-bg: rgb(255, 255, 255);
+    --secondary-bg: rgb(255, 198, 252);
+}
+
 html, body {
     margin: 0;
     height: 100%;
+}
+
+body {
+    background-color: var(--primary-bg);
 }
 
 * {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.hidden{
-    display: none;
-}
-
-/* Variables */
-:root{
-    --first-bg-color: rgb(19, 0, 18);
-    --second-bg-color: rgb(66, 66, 66);
-    --third-bg-color: rgb(255, 0, 0);
-    --fourth-bg-color: rgb(129, 120, 120);
-    --fifth-bg-color: rgb(194, 27, 27);
-}
-
 /*============================================*/
 /* Nav Elements */
 /*============================================*/
-.top-elements{
+#top-elements{
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     top: 0;
     left: 0;
+    padding: 0 0.7rem 0 0.7rem;
     z-index: 1000;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
     transition-property: transform;
-}
-
-.main-nav{
-    background: linear-gradient(to left, #eea849, #ff5dd1);
-    display: flex;
-    flex-direction: row;
-    padding: 0 2vw 0 2vw;
-    align-items: center;
-    margin: 0 0 0 0;
-    height: 7em;
-    z-index: 2;
-    position: relative;
-}
-
-.main-nav-btn{
-    height: 100%;
-}
-
-.nav-block{
-    padding: 0 1vw 0 1vw;
-}
-
-.nav-btn{
-    border-style: none;
-    height: 100%;
-    background-color: transparent;
-    font-size: 1.5rem;
-}
-
-.nav-btn:hover{
-    cursor: pointer;
-}
-
-.main-nav-btn:hover{
-    background-color: rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-}
-
-.main-nav-btn:active{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--secondary-bg);
 }
 
 @media (max-width: 800px){
@@ -90,6 +52,19 @@ html, body {
     .nav-dropdown{
         display: none;
     }
+}
+
+.main-nav-btn {
+    height: 100%;
+    font-size: larger;
+    background-color: transparent;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border: none;
+}
+
+.main-nav-btn:hover {
+    cursor: pointer;
+    background-color: #0004;
 }
 
 .hamburger{
@@ -248,8 +223,6 @@ svg.slime:hover #Open-Mouth{
 /* Temporary Section Formatting Area */
 /*============================================*/
 
-
-
 .skills-section{
     background-color: var(--third-bg-color);
     height: 40vh;
@@ -268,38 +241,7 @@ svg.slime:hover #Open-Mouth{
 /*============================================*/
 /* Landscape Section */
 /*============================================*/
-.landscape-section{
-    background-color: var(--first-bg-color);
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 300px;
-}
 
 /*============================================*/
 /* About Me Section */
 /*============================================*/
-
-.about-me-section{
-    background-color: var(--second-bg-color);
-    padding: 3vh 2vw 3vh 2vw;
-    height: 30rem;
-    display:flex;
-    flex-direction: row;
-}
-
-.about-me-description-card{
-    padding: 1rem;
-    background-color: #141414;
-    display: flex;
-    flex-grow: 2;
-}
-
-.self-portrait{
-    border-radius: 100%;
-    aspect-ratio: 1;
-}
-
-.luci-sprite{
-    flex-grow: 1;
-}

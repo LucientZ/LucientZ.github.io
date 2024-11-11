@@ -1,15 +1,12 @@
-// Requires JQuery
-
 var previousScrollPos = window.scrollY;
-$(window).scroll(function(event) {
+
+window.onscroll = (event) => {
     const currentPos = window.scrollY;
-    // Compares previous scroll position to the current scroll to determine behavior.
-    // Because of some mobile devices bouncing the scroll when a user scrolls to the top, add an extra argument that makes sure the current position reaches a certain threshhold.
-    if(previousScrollPos < currentPos && currentPos > 30){
-        $('.top-elements').css('transform', 'translateY(-200%)');
+    if (previousScrollPos < currentPos && currentPos > 80) {
+        document.getElementById("top-elements").style.transform = "translateY(-200%)";
     }
-    else{
-        $('.top-elements').css('transform', 'translateY(0%)');
+    else {
+        document.getElementById("top-elements").style.transform = "translateY(0%)";
     }
     previousScrollPos = currentPos;
-});
+}
