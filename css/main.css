@@ -1,247 +1,28 @@
-/*============================================*/
-/* Entire Document */
-/*============================================*/
-
-/* Variables */
-:root{
-    --primary-bg: rgb(255, 255, 255);
-    --secondary-bg: rgb(255, 198, 252);
-}
-
-html, body {
-    margin: 0;
-    height: 100%;
-}
-
 body {
-    background-color: var(--primary-bg);
-}
-
-* {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/*============================================*/
-/* Nav Elements */
-/*============================================*/
-#top-elements{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 0 0.7rem 0 0.7rem;
-    z-index: 1000;
-    transition-duration: 0.5s;
-    transition-property: transform;
-    background-color: var(--secondary-bg);
-}
-
-@media (max-width: 800px){
-    .main-nav-btn {
-        display: none;
-    }
-}
-
-@media (min-width: 801px){
-    .hamburger {
-        display: none;
-    }
-    .nav-dropdown{
-        display: none;
-    }
-}
-
-.main-nav-btn {
-    height: 100%;
-    font-size: larger;
-    background-color: transparent;
-    padding: 1rem 1.5rem 1rem 1.5rem;
-    border: none;
-}
-
-.main-nav-btn:hover {
-    cursor: pointer;
-    background-color: #0004;
-}
-
-.hamburger{
-    margin-left: auto;
-    background-color: transparent;
-    justify-content: center;
-}
-
-.hamburger-btn:hover{
-    cursor:pointer;
-}
-
-.hamburger-btn:active{
-    border-radius: 5px;
-    margin-left: auto;
-    background-color: rgba(0, 0, 0, 0.15);;
-}
-
-ul.nav-dropdown{
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
     padding: 0;
     margin: 0;
-    width: 100%;
-    background-color: rgb(53, 53, 53);
-    border-radius: 0 0 20px 20px;
-    overflow: hidden;
-    transform: translateY(-150%);
-    transition-duration: 0.3s;
-    transition-property: transform;
 }
 
-ul.nav-dropdown li{
-    margin:0;
-    padding: 2.2vh 0 2.2vh 0;
-    list-style-type: none;
-    font-size: 30px;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: inherit;
-    color: white;
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
 }
 
-ul.nav-dropdown li:hover {
-    background-color: rgb(81, 81, 81);
-}
-
-#nav-dropdown-toggle:checked ~ .nav-dropdown{
-    transform: translateY(0%);
-}
-
-/*============================================*/
-/* Slime Animation */
-/*============================================*/
-@keyframes slime-bounce{
-    from{
-        transform: translateY(0%);
-    }
-    20%{
-        transform: translateY(-15%) scaleX(0.80);
-    }
-    60%{
-        transform: translateY(8%) scaleX(1.15);
-    }
-    80%{
-        transform: translateY(0%);
-    }
-    to{
-        transform: translateY(0%);
-    }
-}
-
-@keyframes shadow-bounce{
-    20%{
-        transform: scaleX(0.75) scaleY(0.95);
-    }
-    60%{
-        transform: scaleX(1.15) scaleY(1.10);
-    }
-    80%{
-        transform: scale(1);
-    }
-}
-
-@keyframes happy-particle{
-    from{
-        opacity: 0;
-        transform: translateY(8%);
-    }
-    50%{
-        opacity: 60;
-    }
-    to{
-        opacity: 100;
-        transform: translateY(-1%);
-    }
-}
-
-div.slime-image{
-    position: relative;
-    height: 78px;
-    width: 130px;
-    padding: 1.5vh 0 1.5vh 0;
-}
-
-div.slime-image:hover svg.slime-shadow{
-    animation-name: shadow-bounce;
-    animation-duration: 0.7s;
-}
-
-svg.slime{
-    position: absolute;
-}
-
-svg.slime-shadow{
-    position: absolute;
-}
-
-div.slime-image:hover svg.slime .happy{
-    animation-name: happy-particle;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
-}
-
-div.slime-image:hover svg.slime{
-    animation-name: slime-bounce;
-    animation-duration: 0.7s;
-    cursor: grab;
-}
-
-/* Hacky method that makes animation repeat on click */
-div.slime-image:active svg.slime,
-div.slime-image:active svg.slime-shadow{
-    animation-name: none;
+.main-menu-button {
+    background-color: #0002;
+    font-size: x-large;
+    justify-items: left;
     border: none;
+    padding: 0.5rem 0rem 0.5rem 2.5rem;
+    margin-bottom: 0.2rem;
+    left: 0;
+    transform: translate(-2rem, 0);
+    transition: transform 0.2s;
 }
 
-/* Default Opacity Values */
-svg.slime .happy,
-svg.slime #Closed-Eyes,
-svg.slime #Open-Mouth,
-svg.slime:hover #Open-Eyes,
-svg.slime:hover #Closed-Mouth{
-    opacity: 0;
+.main-menu-button:hover {
+    background-color: #0005;
+    cursor: pointer;
+    transform: translate(0, 0);
 }
-
-svg.slime:hover #Closed-Eyes,
-svg.slime:hover #Open-Mouth{
-    opacity: 100;
-}
-
-/*============================================*/
-/* Temporary Section Formatting Area */
-/*============================================*/
-
-.skills-section{
-    background-color: var(--third-bg-color);
-    height: 40vh;
-}
-
-.projects-section{
-    background-color: var(--fourth-bg-color);
-    height: 40vh;
-}
-
-.footer{
-    background-color: var(--fifth-bg-color);
-    height: 40vh;
-}
-
-/*============================================*/
-/* Landscape Section */
-/*============================================*/
-
-/*============================================*/
-/* About Me Section */
-/*============================================*/
