@@ -3,15 +3,41 @@ body {
     margin: 0;
 }
 
+.main-pane {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
 .main-menu {
     display: flex;
+    left: 0;
     flex-direction: column;
+    width: 30rem;
     max-width: 50vw;
+}
+
+.main-menu .main-menu-button:nth-of-type(1) {
+    width: 62.5%;
+}
+
+.main-menu .main-menu-button:nth-of-type(2) {
+    width: 75%;
+}
+
+.main-menu .main-menu-button:nth-of-type(3) {
+    width: 87.5%;
+}
+
+.main-menu .main-menu-button:nth-of-type(4) {
+    width: 100%;
 }
 
 .main-menu-button {
     background-color: #0002;
-    font-size: x-large;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
     justify-items: left;
     border: none;
     padding: 0.5rem 0rem 0.5rem 2.5rem;
@@ -26,3 +52,4 @@ body {
     cursor: pointer;
     transform: translate(0, 0);
 }
+
