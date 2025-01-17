@@ -11,8 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background-image: url("https://i.redd.it/t0j888dskis21.jpg");
-    background-size: 190vh;
+    background-color: #fffbed;
 }
 
 .main-menu {
@@ -36,6 +35,7 @@ body {
     font-size: 4rem;
     font-weight: 200;
     margin-bottom: 1rem;
+    padding-left: 0.5rem;
 }
 
 .main-menu .main-menu-button:nth-of-type(1) {
@@ -56,6 +56,7 @@ body {
 
 .main-menu-button {
     display: flex;
+    background: none;
     flex-direction: row;
     justify-items: left;
     border: none;
@@ -92,7 +93,7 @@ body {
     padding: 2px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 4px;
-    transition: width 0.6s, left 0.6s;
+    transition: width 0.5s, left 0.5s;
     transition-timing-function: ease-out;
 }
 
