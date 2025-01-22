@@ -6,12 +6,20 @@ body {
     display: grid;
 }
 
-.main-pane {
+.pane {
+    display: none; /* Hides all panes initially to be used later */
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     position: absolute;
     background-color: #fffbed;
+}
+
+#main-pane {
+    display: block;
 }
 
 .main-menu {
@@ -26,10 +34,11 @@ body {
     left: 0;
     flex-direction: column;
     width: 40rem;
-    max-width: 70vw;
+    max-width: 85vw;
     position: relative;
     z-index: 1;
 }
+
 
 .main-menu-title {
     font-size: 4rem;
@@ -68,7 +77,7 @@ body {
 }
 
 .main-menu-button div {
-    background-color: #5d5d5d;
+    background-color: #5d5d5dea;
     width: 100%;
     height: 100%;
     text-align: left;
@@ -78,6 +87,7 @@ body {
     color: aliceblue;
     font: inherit;
     font-size: 2rem;
+    transition: background-color 0.3s;
 }
 
 .main-menu-button::after {
@@ -89,17 +99,12 @@ body {
     left: 0%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(155, 150, 255);
     padding: 2px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 4px;
-    transition: width 0.5s, left 0.5s;
+    transition: width 0.3s, left 0.3s;
     transition-timing-function: ease-out;
-}
-
-.main-menu-button:hover {
-    cursor: pointer;
-    transform: translate(0, 0);
 }
 
 .main-menu-button:hover::after {
@@ -110,6 +115,18 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.main-menu-button:hover {
+    cursor: pointer;
+    transform: translate(0, 0);
+}
+
 .main-menu-button:hover div {
-    background-color: #676054;
+    background-color: #8c7c61;
+}
+
+.main-menu-person-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
 }

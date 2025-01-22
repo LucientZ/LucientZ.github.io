@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="main-pane">
+    <div class="pane" id="main-pane">
         <div class="main-menu">
             <div class="main-menu-title">LucienZ</div>
             <button class="main-menu-button">
@@ -23,10 +23,15 @@
             <button class="main-menu-button">
                 <div>Projects</div>
             </button>
-            <button class="main-menu-button">
+            <button class="main-menu-button" onclick="setCurrentPane('art-pane')">
                 <div>Art Portfolio</div>
             </button>
         </div>
+        <img class="main-menu-person-image" src="/img/Placeholder-Person.png">
+    </div>
+    <div class="pane" id="art-pane">
+        <button onclick="setCurrentPane('main-pane')">Back</button>
+        <div></div>
     </div>
 </body>
 
